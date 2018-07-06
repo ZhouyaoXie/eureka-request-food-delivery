@@ -1,0 +1,4 @@
+insert into mel_order values('1', '123456789', '1', '7', '1', 'Forbidden City, Beijing, China');
+insert into mel_order values('2', '987654321', '1', '2', Null, 'Disneyland, Shanghai, China');
+
+insert into order_delivery values('1','1','2','3','Center of universe','Forbidden City, Beijing, China');

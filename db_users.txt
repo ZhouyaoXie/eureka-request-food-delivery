@@ -1,0 +1,5 @@
+CREATE USER 'restaurant'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL ON db.* TO 'restaurant'@'localhost';
+
+CREATE USER 'deliver'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL ON db.* TO 'deliver'@'localhost';

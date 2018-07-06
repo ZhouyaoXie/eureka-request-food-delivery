@@ -1,0 +1,60 @@
+CREATE TABLE mel_order
+(
+order_id INT(20) primary key AUTO_INCREMENT,
+user_id INT(11) not NULL,
+re_id INT(11) not NULL,
+order_state TINYINT(1) not NULL,
+od_id INT(20),
+`add` VARCHAR(50)
+)
+;
+
+CREATE TABLE order_delivery
+(
+od_id INT(20) primary key AUTO_INCREMENT,
+order_id INT(20) not NULL,
+de_id INT(11),
+od_state TINYINT(1) not NULL,
+re_add VARCHAR(50),
+`add` VARCHAR(50)
+)
+;
+
+CREATE TABLE restaurant
+(
+re_id INT(11) primary key AUTO_INCREMENT,
+re_add VARCHAR(50) not NULL,
+re_name VARCHAR(50) not NULL
+)
+;
+
+CREATE TABLE menu
+(
+re_id INT(11) not NULL,
+dish VARCHAR(20) not NULL,
+price FLOAT(10) not NULL
+)
+;
+
+CREATE TABLE user
+(
+user_id INT(11) primary key AUTO_INCREMENT,
+user_phone INT(11) not NULL UNIQUE,
+user_password VARCHAR(20) not NULL
+)
+;
+
+CREATE TABLE deliver
+(
+de_id INT(11) primary key AUTO_INCREMENT,
+de_phone INT(11) not NULL UNIQUE,
+de_password VARCHAR(20) not NULL
+)
+;
+
+CREATE TABLE address
+(
+user_id INT(11) not NULL,
+address VARCHAR(50) not NULL
+)
+;
